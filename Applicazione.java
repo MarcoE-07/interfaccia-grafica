@@ -1,6 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
-
 public class Applicazione {
    public static void main(String[] args){
      F1 nuova =new F1("Esercitazione");
@@ -9,7 +6,7 @@ public class Applicazione {
      //nuova.setSize(null);
     
 
-     F2 nuove = new F2(null);
+     //F2 nuove = new F2(null);
      //nuova.setVisible(true);
      //nuova.setLocation(900,400);
      //nuova.setSize(null);

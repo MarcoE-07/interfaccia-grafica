@@ -17,10 +17,12 @@ class F1 extends JFrame implements ActionListener{
         ta = new JTextArea();
         p1 = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         b1 = new JButton("Inserisci");
+        b2 = new JButton("Ok");
         //Posizione gli elementi
         add(tf,BorderLayout.NORTH);
         add(ta,BorderLayout.CENTER);
         p1.add(b1);
+        p1.add(b2);
         add(p1, BorderLayout.SOUTH);
         //Registrazione Listener    
         b1.addActionListener(this);
