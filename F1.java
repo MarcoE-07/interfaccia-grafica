@@ -1,10 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
-class F1 extends JFrame{
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+class F1 extends JFrame implements ActionListener{
     private JTextField tf;
     private JTextArea ta;
     private JPanel p1;
     private JButton b1;
+    private JButton b2;
+
 
     public F1(String titolo){
         super(titolo);
@@ -18,10 +22,21 @@ class F1 extends JFrame{
         add(ta,BorderLayout.CENTER);
         p1.add(b1);
         add(p1, BorderLayout.SOUTH);
-        //Registrazione Listener
+        //Registrazione Listener    
+        b1.addActionListener(this);
+        b2.addActionListener(this);
         //Operazioni finali
         setSize(300,400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // TODO Auto-generated method stub
+        if(e.getSource()==b1);
+            ta.append(tf.getText()+"\n");
+        if(e.getSource()==b2);
+            ta.setText("");
     }
 }
